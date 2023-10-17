@@ -1,0 +1,7 @@
+Make a big project like a  
+Learning Management System, 
+Customer Relation Management, 
+Inventory Management System, 
+Employee Management System , 
+Point Of Sale, 
+Etc.
