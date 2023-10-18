@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+    <style>
+
+        table ,tr, td,th {
+            border: 1px solid black ;
+        }
+        /* table {
+            border: 1px solid black ;
+        }
+
+        tr {
+            border: 1px solid black ;
+        }
+        td,th {
+            border: 1px solid black ;
+        } */
+    </style>
+    </head>
+
+    <body>
+        <h1>Simple Table</h1>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+        </table>
+        <h1>Table with heading</h1>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Potaoes</td>
+                <td>12</td>
+                <td>$ 1.00</td>
+            </tr>
+            <tr>
+                <td>Tomtoes</td>
+                <td>10</td>
+                <td>$ 5.00</td>
+            </tr>
+            <tr>
+                <td>Grapes</td>
+                <td>100</td>
+                <td>$ 55.00</td>
+            </tr>
+        </table>
+    </body>
+
+    <h1>Table caption</h1>
+    <table>
+        <caption>Student Info</caption>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>Ahmad</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>Ahmad</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>Ahmad</td>
+            <td>20</td>
+        </tr>
+    </table>
+    
+    <h1>Tables with sections</h1>
+    <table>
+        <thead>
+            <tr">
+                <th>Sr.</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Male</th>
+                <th>Female</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Pakistan</td>
+                <td>Punjab</td>
+                <td>Lahore</td>
+                <td>10000</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pakistan</td>
+                <td>Punjab</td>
+                <td>Islamabd</td>
+                <td>20000</td>
+                <td>30000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>30000</td>
+                <td>40000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>col group Table</h1>
+    <table>
+        <colgroup>
+            <col>
+            <col style="background-color: blueviolet;">
+            <col>
+            <col>
+            <col style="background-color: aqua;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr style="background-color:red ;">
+                <th>Sr.</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th >Male</th>
+                <th>Female</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Pakistan</td>
+                <td>Punjab</td>
+                <td>Lahore</td>
+                <td >10000</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pakistan</td>
+                <td>Punjab</td>
+                <td>Islamabd</td>
+                <td style="background-color: burlywood;" >20000</td>
+                <td>30000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>30000</td>
+                <td>40000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Table col span</h1>
+    <table>
+        <thead>
+            <tr">
+                <th>Sr.</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Male</th>
+                <th>Female</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Pakistan</td>
+                <td>Punjab</td>
+                <td>Lahore</td>
+                <td>10000</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pakistan</td>
+                <td>Punjab</td>
+                <td>Islamabd</td>
+                <td>20000</td>
+                <td>30000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td colspan="3"></td>
+                <td>30000</td>
+                <td>40000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Row Span</h1>
+    <table>
+        <thead>
+            <tr">
+                <th>Sr.</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Male</th>
+                <th>Female</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td rowspan="2" >Pakistan</td>
+                <td rowspan="2">Punjab</td>
+                <td>Lahore</td>
+                <td>10000</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Islamabd</td>
+                <td>20000</td>
+                <td>30000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>30000</td>
+                <td>40000</td>
+            </tr>
+        </tfoot>
+    </table>
+</html>
