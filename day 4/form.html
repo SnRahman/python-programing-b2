@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Form</h1>
+        <!-- method= 'POST' -->
+        <form action="" method="GET" target="_blank">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fanme">
+            
+            <br>
+            <label for="age"> Age</label>
+            <input type="number" id="age" name="age">
+            <br>
+
+            <label for="gender"> Gender</label>
+            <input type="radio" name="gender" value="male" checked>Male
+            <input type="radio" name="gender" value="female">Female 
+
+            <br>
+            <label>Activities
+                <input type="checkbox" name="cricket" value="1" checked>Cricket
+                <input type="checkbox" name="footbal" value="1">Football            
+                <input type="checkbox" name="hockey" value="1" checked>Hockey            
+                <input type="checkbox" name="basketball" value="1">Basketball 
+            </label>
+              
+            <br>
+            <label for="address">Address</label>
+            <textarea name="" id="address" cols="20" rows="5">
+            </textarea>
+            <br>
+
+            <!-- <input type="button" value="Submit"> -->
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+        <h1>Target</h1>
+
+        <form target="_blank">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fanme">
+            
+            <br>
+            <label for="age"> Age</label>
+            <input type="number" id="age" name="age">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+        <h1>Method</h1>
+
+        <form method="POST">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fanme">
+            
+            <br>
+            <label for="age"> Age</label>
+            <input type="number" id="age" name="age">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h1>Select</h1>
+
+        <form>
+            <label for="city">City</label>
+            <select id="city" name="city">
+                <option value="" disabled>Please select the city</option>
+                <option value="lhr">Lahore</option>
+                <option value="skp">Sheikhupra</option>
+                <option value="isl" selected>Islamabd</option>
+                <option value="fsb">Faisalabad</option>
+            </select>
+
+            <h1>Select Group</h1>
+            <label for="pk-city">Choose City</label>
+            <select name="pk-city" id="pk-city">
+                <optgroup label="Punjab">
+                    <option value="">Lahore</option>
+                    <option value="">Faisalabad</option>
+                    <option value="">Sheikhupra</option>
+                </optgroup>
+
+                <optgroup label="Sindh" >
+                    <option value="">Karachi</option>
+                    <option value="">Hyderabad</option>
+                    <option value="">larkana</option>
+                </optgroup>
+            </select>
+
+
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h1>File</h1>
+
+        <form>
+            <label for="file">File</label>
+            <input type="file" id="file" name="file">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+
+    </body>
+</html>
