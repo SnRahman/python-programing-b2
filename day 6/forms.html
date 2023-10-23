@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Your Address</legend>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name"> <br>
+
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name"><br>
+
+            <label for="street">Street</label>
+            <input type="text" name="street" id="street"><br>
+            
+            <label for="city">City</label>
+            <input type="text" name="city" id="city">
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Details</legend>
+            <label for="bio">Biography</label>
+            <textarea name="bio" id="bio" cols="30" rows="3"></textarea>
+            <br>
+
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image">
+
+            <br>
+            <label for="age_group">Age Group</label>
+            <select name="age_group" id="age_group">
+                <option value="1"> 0 - 9 years</option>
+            </select>
+        </fieldset>
+        <hr>
+        
+        <!-- datalist -->
+        <label for="search">Search</label>
+        <input type="text" name="search" id="serach" list="search_data">
+
+        <datalist id="search_data">
+            <option value="Web Development">
+            <option value="Python development">
+            <option value="App development">
+            <option value="Digital marketing">
+            <option value="Advance Computing">
+        </datalist>
+
+
+        <hr>
+        <!-- autocomplete-->
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" autocomplete="off">
+
+        <hr>
+
+        <!-- required -->
+        <label for="email">email</label>
+        <!-- <input type="text" name="email" id="email" required> -->
+        <input type="text" name="email" id="email">
+        
+        <br>
+        <!-- selected -->
+        <label for="hobbies">Hobbies</label>
+        <select name="hobbies" id="hobbies">
+            <option value="">Please select ...</option>
+            <option value="cric">Cricket</option>
+            <option value="basketball">Basketball</option>
+            <option value="football" >Football</option>
+            <option value="hockey" selected>Hockey</option>
+        </select>
+
+        <br>
+        <!-- multiple -->
+        <label for="hobbies">Hobbies</label>
+        <select name="hobbies" id="hobbies" multiple>
+            <option value="">Please select ...</option>
+            <option value="cric">Cricket</option>
+            <option value="basketball">Basketball</option>
+            <option value="football" >Football</option>
+            <option value="hockey" selected>Hockey</option>
+        </select>
+
+        <br>
+        <!-- disabled -->
+        <label for="hobbies">Hobbies</label>
+        <select name="hobbies" id="hobbies">
+            <option value="">Please select ...</option>
+            <option value="cric">Cricket</option>
+            <option value="basketball" disabled>Basketball</option>
+            <option value="football" >Football</option>
+            <option value="hockey" disabled>Hockey</option>
+        </select>
+        <br>
+
+        <!-- value -->
+
+        <label for="email">Email </label>
+        <input type="text" name="email" id="email" value="abc@abc.com">
+
+        <br>
+
+        <!-- readonly -->
+
+        <label for="email">Email </label>
+        <input type="text" name="email" id="email" value="abc@abc.com" readonly>
+
+        <br>
+
+        <!-- size -->
+        <label for="last_name"> last Name</label>
+        <input type="text" name="last_name" id="last_name" size="50">
+
+        <br>
+        <!-- maxlength -->
+        <label for="last_name"> last Name</label>
+        <input type="text" name="last_name" id="last_name" maxlength="10">
+
+        <br>
+        <!-- min -->
+        <!-- <label for="age"> Age</label>
+        <input type="number" name="age" id="age" min="13"> -->
+
+        <!-- max -->
+        <!-- <label for="age"> Age</label>
+        <input type="number" name="age" id="age" max="50">
+
+        <label for="age"> Age</label>
+        <input type="number" name="age" id="age" min="13" max="50"> -->
+
+        <!-- placeholder-->
+        <label for="last_name"> last Name</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Last Name`">
+
+        <br>
+        <!-- Step -->
+        <label for="">Price</label>
+        <input type="number" name="price" id="price" step="0.001">
+        <button type="submit"> submit</button>
+
+    </form>
+    <hr>
+    
+    <!-- novalidate -->
+    <form novalidate>
+        <label for="email">email</label>
+        <input type="text" name="email" id="email" required>
+        <button type="submit"> submit</button>
+    </form>
+
+
+</body>
+</html>
