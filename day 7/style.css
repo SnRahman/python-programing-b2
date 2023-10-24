@@ -1,0 +1,113 @@
+/* li {
+    color: blue;
+} */
+
+ul * {
+    color: blue;
+}
+
+.test {
+    background-color: aqua;
+}
+
+p.test {
+    background-color: brown;
+}
+
+p , span, h1 {
+    color: brown;
+} 
+
+#p1 {
+   /* text-align:justify;  */
+   text-align:center; 
+}
+
+#p2 {
+    text-align: justify;
+    text-align-last: center;
+}
+
+#p3 {
+    text-indent: 5%;
+}
+
+#color {
+    color: aqua;
+}
+
+#decoration {
+    /* decoration line */
+    /* text-decoration-line:underline; */
+    text-decoration-line:overline;
+    /* text-decoration-line:line-through; */
+
+    /* decoration color */
+    text-decoration-color: black;
+
+    /* change line style */
+    /* text-decoration-style: dashed; */
+    /* text-decoration-style:double; */
+    /* text-decoration-style: wavy;     */
+    text-decoration-style:dotted;  
+
+    /* change line thickness */
+    text-decoration-thickness: 5px;
+    
+}
+
+#decoration1 {
+    text-decoration: underline red wavy 5px;
+}
+
+#anchor {
+    text-decoration: none;
+    color: black;
+}
+
+.transform {
+    /* text-transform: uppercase; */
+    /* text-transform: capitalize; */
+    text-transform: lowercase;
+}
+
+.spacing {
+    text-indent: 10%;
+    line-height: 15px;
+    /* letter-spacing: 3px; */
+    word-spacing: 15px;
+    white-space: 15px;
+}
+
+.shadow {
+    /* text-shadow: 3px 3px 5px blue; */
+    text-shadow: 3px 3px 5px blue, 3px 3px 5px chartreuse;
+}
+
+
+/* body {
+    font-family: 'Courier New', Courier, monospace;
+} */
+
+.family{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.size {
+    font-size: 50px;
+}
+
+.font-style {
+    font-style: italic;
+}
+
+.font-weight {
+    /* font-weight: 100; */
+    font-weight: 900;
+}
+
+
+
+
+
+
