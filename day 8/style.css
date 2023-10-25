@@ -1,0 +1,111 @@
+#border {
+    /* border: 1px solid black; */
+    border: 1px dashed black;
+    height: 100px;
+    width: 100px;
+}
+
+#border2 {
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;
+    height: 100px;
+    width: 100px;
+}
+
+
+.border2 {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    /* margin: 10px; */
+    /* margin: 10px 50px; */
+    margin: 10px 20px 30px 40px;
+}
+
+
+.parent {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+
+.child {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+.parent1 {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    /* padding: 20px; */
+    /* padding: 20px 50px; */
+    /* padding: 10px 20px 30px 100px; */
+    padding-top:50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+    margin: 20px;
+}
+
+.child1 {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+
+.shadow {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    /* box-shadow: 1px 1px 2px darkgreen; */
+    /* box-shadow: 5px 5px 5px darkgreen, 5px 5px 5px darkmagenta; */
+    box-shadow: -5px -5px 5px darkgreen,5px 5px 5px darkgreen;
+}
+
+.image {
+    border: 1px solid black;
+    height: 2000px;
+    width: 2000px;
+    background-image: url(../imges/bird2.png);
+    background-repeat: no-repeat;
+    /* x - left- center- right */
+    /* y - top - center- bottom */
+    /* background-repeat:repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-position: center; */
+    /* background-position: right top ; */
+    /* background-position: right bottom ; */
+    /* background-position: center bottom ; */
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 2000px 2000px ;
+}
+.clip {
+    border: 10px dotted black;
+    height: 500px;
+    width: 500px;
+    padding:10px;
+    background: red ;
+    /* background-clip: border-box; */
+    /* background-clip: padding-box; */
+    background-clip: content-box;
+}
+
+
+.inner {
+    border: 10px solid black;
+    height: 500px;
+    width: 500px;
+    box-shadow: inset 3px 3px 3px red , inset -3px -3px 3px red;
+}
