@@ -17,7 +17,7 @@
 .units {
     border: 1px solid black;
     font-size: 15px;
-    width: 10em;
+    width: 2em;
     height: 50em;
 }
 
@@ -34,7 +34,7 @@ html {
 
 .viewport {
     border: 1px solid black;
-    width: 50vw;
+    width: 25vw;
     height: 50vh;
 }
 
@@ -47,7 +47,7 @@ html {
 
 .child {
     border: 1px solid black;
-    width: 50%;
+    width: 25%;
     height: 75%;
     background-color: aqua;
 }

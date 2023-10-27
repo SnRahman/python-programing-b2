@@ -1,0 +1,43 @@
+.background {
+    background-color: aqua;
+}
+
+#p-1 {
+    display: inline;
+}
+
+#p-2 {
+    display: inline;
+}
+
+/* a {
+    display: block;
+} */
+
+#p-3 {
+    height: 50px;
+    display: inline;
+}
+
+#s-1 {
+    height: 50px;
+}
+
+.a-1 {
+    background-color: aquamarine;
+    height: 100px;
+    display: inline-block;
+}
+
+.div-1 {
+    height: 100px;
+    background-color: blueviolet;
+    color: aliceblue;
+    display: none;
+}
+
+.div-2 {
+    height: 100px;
+    visibility: hidden;
+    /* visibility: visible; */
+}
