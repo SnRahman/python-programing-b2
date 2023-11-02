@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Conditions</title>
+    <script>
+        // alert('hello')
+        let page = 'home'
+        if( page == 'home'){
+            console.log('This is home page')
+        }
+
+        page = 'shop'
+        if(page == 'shop') {
+            console.log('This is shop page')
+        }
+
+        page = 'login'
+        if(page == 'login') {
+            console.log('This is login page, kindly login.')
+        }
+
+        // alert('Home')
+        // less than <
+
+
+        let a = 5 , b = 10;
+        // if
+        if(b < a ) {
+            console.log('Condition is true')
+        }
+
+        // if else
+        if(b < a ) {
+            console.log('Condition is true')
+        } else {
+            console.log('Condition is false')
+        }
+
+        //  multiple if conditions
+        let c = 10
+
+        if (c == 10) {
+            console.log('greater')
+        }
+
+        if (c < 20){
+            console.log("less than given value")
+        }
+
+        // if else if
+
+
+        let d = 20
+        if (d == 20) {
+            console.log('greater')
+        } else if (d < 30) {
+            console.log('less than given value')
+        }
+
+
+        // greater than >
+
+        let e = 3
+
+        if (e > 5) {
+            console.log('greater')
+        } else {
+            console.log('less')
+        }
+
+
+        // greater than equall to
+
+        let f = 10
+        if (f >= 11){
+            console.log('greater and equall')
+        } else {
+            console.log('less and not equall')
+        }
+
+
+         // less than equall to
+
+        let g = 11
+        if (g <= 11){
+            console.log('greater and equall')
+        } else {
+            console.log('less and not equall')
+        }
+
+
+        // not equall
+
+        let h = "shop"
+
+        if ( h != 'home' ) {
+            console.log('home - condition is true')
+        } else {
+            console.log('not home')
+        }
+
+
+        // compaare value and data type  ===
+
+        let i = 10
+        let j = '10'
+
+        if (i === j){
+            console.log('same')
+        } else {
+            console.log('not same')
+        }
+
+
+        // compaare value and data type !==
+
+        let k = 10
+        let l = '10'
+
+        if (k !== l){
+            console.log('not same - condition true')
+        } else {
+            console.log(' condition false')
+        }
+
+
+        // logical operators and / or 
+
+        let age = 25
+
+        if ( age >= 13 && age<=65 ){
+
+            console.log('allowed')
+        } else {
+            console.log('not allowed')
+        }
+
+        // or 
+
+        let age1 = 35
+
+        if ( age1 >= 13 || age1 <=65){
+            console.log('allowed - or')
+        } else {
+            console.log('not allowed')
+        }
+
+
+        //  NOt operator
+
+        let n = 20
+        if (! n == 20) {
+            console.log('true - not')
+        } else {
+            console.log('false')
+        }
+
+        // 85 - 4
+        // 75 - 85 - 3.5
+        
+        // 65 - 75 - 3
+        // 50 - 65 - 2
+
+
+        let marks = 51
+
+        // seperate conditions
+        if (marks >= 85){
+            console.log('Grade: 4')
+        }
+
+        if (marks >= 75 && marks < 85 ){
+            console.log('Grade: 3.5')
+        }
+
+        if (marks >= 65 && marks < 75 ){
+            console.log('Grade: 3')
+        }
+
+        if (marks >= 50 && marks < 65 ){
+            console.log('Grade: 2')
+        }
+
+        // if else conditions
+        if (marks >= 85){
+            console.log('Grade: 4')
+        } else if (marks >= 75 && marks < 85 ){
+            console.log('Grade: 3.5')
+        } else if (marks >= 65 && marks < 75 ){
+            console.log('Grade: 3')
+        } else if (marks >= 50 && marks < 65 ){
+            console.log('Grade: 2')
+        } else {
+            console.log('Fail')
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>check two given numbers and return true if one of them is 50 or if their sum is 50</li>
+            <li>check from the given number, weather it is positive or negative.</li>
+            <li>check weather a given number is even or odd.</li>
+            <li>check weather a given positive number is a multiple of 3.</li>
+            <li>determine weather a given year is a leap year.</li>
+            <li>check from the given two numbers, weather the first number is "grater", "lesser" or "equal" to the second number.</li>
+            <li>check from the three sides of triangle. use conditions to determine and display weather the triangle is "Equilateral" (all sides are equal), "Isosceles" (two sides are equal), or "Scalane" (no sides are equal)</li>
+            <li>check from the given month (1-12) if its "Winter" (December-Feburary), "Spring" (March-May), "Summer" (June-August), or "Autumn" OR "Fall" (September-November).</li>
+        </ul>
+        
+        
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
