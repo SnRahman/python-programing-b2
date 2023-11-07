@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Function Tasks</title>
+</head>
+<body>
+    
+    <script>
+        // task 1
+        // Create a function that takes two numbers as input and returns the largest of the two.
+
+        function check_numbers(a,b){
+            if(a>b) {
+                console.log('First number is Greater '+ a)
+            } else if(a<b){
+                console.log('Second number is Greater '+ b)
+            } else {
+                console.log('both numbers are equal ' + a + ',' +b )
+            }
+        }
+        // check_numbers(12,24)
+        // check_numbers(40,24)
+        // check_numbers(40,40)
+
+
+        function return_number(a,b){
+            if(a>b) {
+                // console.log('First number is Greater '+ a)
+                return a
+            } else if(a<b){
+                // console.log('Second number is Greater '+ b)
+                return b
+            }
+        }
+        
+        // result = return_number(12,24)
+        // console.log(result)
+
+        // task 2
+        // create a function that takes two strings as input and returns a new string that concatenates both if them.
+    
+        function concat_strings(a,b){
+            return a + ' '+ b
+        }
+
+        let result = concat_strings('Hello','World!')
+        // console.log(result)
+
+        // task 3
+        // Write a function that takes a temperature in celsius and converts it to Fahrenheit.
+
+
+        function cel_to_far(temp_cel){
+            let temp_far = (temp_cel * (9/5) )  + 32
+            return temp_far
+        }
+
+        let temp_far = cel_to_far(27)
+        // console.log('temp: '+ temp_far) 
+
+
+        // task 4 
+        // Write a program that takes the age and checks if they are eligible for voting (e.g 18 or older)
+
+        function check_eligibility(age){
+            if (age >= 18) {
+                console.log('Eligibile')
+            } else {
+                console.log('Not Eligibile')
+            }
+        }
+
+        // check_eligibility(15)
+        // check_eligibility(18)
+        // check_eligibility(25)
+
+
+        // task 5 
+        // Implement a function that checks if a given number is positive, negative, or zero and return the result.</li>
+        
+        function check_number(number){
+            if(number < 0){
+                console.log('Negative Number')
+            } else if(number > 0) {
+                console.log('Positive Number')
+            } else {
+                console.log('Number is zero')
+            }
+        }
+
+        // check_number(0)
+        // check_number(25)
+        // check_number(-25)
+    
+        // task 6
+        //create a function that takes two numbers as input and returns their product  using arithmetic operations. (e.g the product of 2 and 3 is 6) 
+    
+        function cal_product(a,b){
+            return a*b
+        }
+        
+        let res = cal_product(15,2)
+        // console.log(res)
+    
+
+        // task 7
+        // implement a function that takes two strings as input and checks if they are equal.
+
+        function check_strings(a,b){
+            if (typeof  a == 'string' && typeof  b == 'string') {
+                if(a==b) {
+                    console.log('equall')
+                } else {
+                    console.log('not equall')
+                }
+            } else {
+                console.log('Parameter type should be string')
+            }
+            
+        }
+
+        // check_strings('hello','hello')
+        // check_strings('hello','Hello')
+        // check_strings(10,'10')
+        // check_strings('10','10')
+        // check_strings(10,10)
+        // let a = 25
+        // console.log(typeof '1o')
+        // console.log(typeof a)
+
+
+        // task 8
+        // Write a function that takes a number as input and returns the absolute value of the number
+
+        function check_abs(a){
+
+            if (a<0) {
+                return a*(-1)
+            } else {
+                return a
+            }
+        }
+
+        let a1 = check_abs(-12354)
+        console.log(a1)
+
+
+    </script>
+</body>
+</html>
