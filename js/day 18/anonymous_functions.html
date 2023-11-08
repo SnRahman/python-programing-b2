@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Anonymous Functions</title>
+    </head>
+    <body>
+       
+        <script>
+
+            // gerenal/simple functions
+            function display() {
+                console.log('hello world!')
+            }
+
+            // display()
+
+
+            // 1 method
+            let display1 = function () {
+                console.log('hello class! ')
+            }
+
+            display1()
+
+            // general function with parameters
+            function add(a,b){
+                console.log(a+b)
+            }
+            add(10,20)
+
+
+            let sum = function (a,b){
+                console.log('sum is:' + (a+b))
+            }
+            sum(10,50)
+
+
+            let mul = function (a,b,c) {
+                return a*b*c
+            }
+            // mul(2,4,5)
+
+            let res =  mul(2,4,5)
+            console.log(res)
+
+
+            // arrow functions
+
+            // function name(){}
+            // let a = function () {}
+
+            let display2 = () => { console.log('Arrow function') }
+            display2()
+
+
+            let sum1 = (a,b,c) => { console.log(a+b+c)}
+
+            sum1(10,25,25)
+
+
+
+            let mul1 = (a,b,c) => { return a*b*c }
+
+            let res1 = mul1(2,3,5)
+            console.log(res1)
+
+
+            // cal square  
+            // let square = (a) => { 
+            //     res =a**2 
+            //     return res
+            // }
+
+            let square = (a) => a**2
+
+            let res2 = square(5)
+            console.log(res2)
+
+
+            // example
+            function check_number(a) {
+                if(a < 0){
+                    console.log('Negative Number')
+                } else if(a > 0) {
+                    console.log('Positive Number')
+                } else {
+                    console.log('Number is zero')
+                }
+            }
+            check_number(-102)
+
+            // anonymous function
+            let check_number1 = function (a) {
+                if(a < 0){
+                    console.log('Negative Number')
+                } else if(a > 0) {
+                    console.log('Positive Number')
+                } else {
+                    console.log('Number is zero')
+                }
+            }
+            check_number1(254)
+
+            // arrow function
+
+            let check_number2 = (a) => {
+                if(a < 0){
+                    console.log('Negative Number')
+                } else if(a > 0) {
+                    console.log('Positive Number')
+                } else {
+                    console.log('Number is zero')
+                }
+            }
+            check_number2(0)
+
+
+            let check_even = (a) => {
+                if (a % 2 == 0 ){
+                    console.log('Even')
+                } else {
+                    console.log('Odd')
+                }
+            }
+            check_even(25)
+            check_even(2)
+
+            console.log('single line if else')
+            let check_even1 = (a) => a % 2 == 0 ? console.log('Even') : console.log('Odd')
+            check_even1(36)
+
+            // if (n4 % 3 == 0 ){
+            //     console.log('Multipe of 3')
+            // } else {
+            //     console.log('Not a Multipe of 3')
+            // }
+
+            let multiplier_check = (z) =>  z % 3 == 0 ? console.log('Multipe of 3') : console.log('Not a Multipe of 3')
+            multiplier_check(30)
+            multiplier_check(31)
+
+            let multiplier_check1 = (z) => z % 3 == 0 ? true : false
+            let res3 = multiplier_check1(54)
+            console.log(res3)
+            
+
+           
+            // general function
+            function sum2(a,b) {
+                console.log(a+b)
+            }
+            sum2(2,3)
+
+            // sum1 = (a,b,c) => { console.log(a+b+c)}
+            function general(a,b,todo) {
+                console.log( todo(a,b) )
+            }
+
+            general(10,63, (a,b) => a+b )
+            general(63,52, (a,b) => a-b )
+            general(6,10, (a,b) => a*b )
+            general(60,10, (a,b) => a/b )
+            general(61,10, (a,b) => a%b )
+            general(2,8, (a,b) => a**b )
+
+
+
+            // todo = (a,b) => a+b
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
