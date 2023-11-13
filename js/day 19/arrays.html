@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+    
+    <script>
+
+        let a = 10
+        a = 11
+
+        // array declaration
+        let b = [10,11,12,15,36,12,11]
+        let c = ['hello','world','Ahmad','Abdullah']
+        let d = [12.0,125.25,4521.25]
+        let e = new Array(45,58,57,58,47)
+
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(d)
+        console.log(e)
+
+        // array access
+        console.log(e[0])
+        console.log(e[1])
+        console.log(e[2])
+        console.log(e[3])
+        console.log(e[4])
+        console.log(e[5])
+        console.log(a[0])
+
+        // check the type of variable 
+
+        // console.log( typeof a)
+        // console.log( typeof e)
+
+        // if(typeof e == 'object') {
+        //     console.log(e[1])
+        // } else {
+        //     console.log(e)   
+        // }
+        console.log(e)
+
+        // e = 25
+        // console.log(e[1])
+
+        // if(typeof e == 'number') {
+        //     console.log(e)
+        // }
+        // 1
+        if(typeof e == 'object') {
+            console.log(e[1])
+        } else {
+            console.log(e)   
+        }
+
+        // 2
+        console.log( e instanceof Array)
+        console.log( b instanceof Array)
+        console.log( c instanceof Array)
+        console.log( d instanceof Array)
+
+        // 3
+        console.log(Array.isArray(e))
+        console.log(Array.isArray(b))
+        console.log(Array.isArray(c))
+        console.log(Array.isArray(a))
+
+        // toString() convert the array into string
+        // let arr_to_str = c.toString()
+        let arr_to_str = b.toString()
+        console.log(arr_to_str)
+
+        // join the array using self defined rule
+        // let arr_join = b.join()
+        // let arr_join = b.join("#")
+        // let arr_join = b.join("")
+        let arr_join = b.join(" ")
+        console.log(arr_join)
+
+        // push function to add new value in an array
+        c.push('Pakistan')
+        c.push('india')
+        console.log(c)
+
+        //pop function remove value form the array
+        c.pop()
+        console.log(c)
+
+        // add value at start of the array
+        c.unshift('Lahore')
+        console.log(c)
+
+        // remove value form strt of array
+        c.shift()
+        console.log(c)
+
+        // splice function to add/ remove multiple values form array form specific index in between the start and end.
+        // c.splice(start_index,qty_removed)
+        c.splice(1,1)
+        console.log(c)
+
+        // add values in between
+        // c.splice(1,0,'Punjab','Sindh','KPK')
+        c.splice(1,1,'Punjab','Sindh','KPK')
+        console.log(c)
+
+        // slice get chunk of array without affecting orignal array
+        // let slice_arr = c.slice(1,5)
+        let slice_arr = c.slice(2,4)
+        console.log(slice_arr)
+        console.log(c)
+
+        // delete a value from given index of array
+        console.log(c[4])
+
+        delete c[4]
+        // c[4] = ''
+        console.log(c)
+
+        // update any index value
+        console.log(c[4])
+        c[4] = 'Balochistan'
+
+        console.log(c)
+
+
+        // string concatenation
+        console.log('Hello' + ' World')
+
+        // Array concatenation
+        // let arr_concat = b.concat(d)
+        let arr_concat = b.concat(c)
+        console.log(arr_concat)
+        console.log(b)
+        console.log(d)
+        
+        // get index of any value form array
+        // let index = c.indexOf('kpk')
+        // let index = c.indexOf('KPK')
+        // if (index != -1) {
+
+        // }
+
+        let index = b.indexOf(12)
+        console.log(index)
+
+        // get last index of any value
+        let last_index = b.lastIndexOf(12)
+        console.log(last_index)
+
+        // check if given value present in array or not - return true or false 
+        console.log( b.includes(12) )
+        console.log( b.includes(11) )
+        console.log( b.includes(110) )
+
+    </script>
+</body>
+</html>
