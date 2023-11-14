@@ -22,9 +22,10 @@
         a = 11
 
         // array declaration
-        let b = [10,11,12,15,36,12,11]
+        let b = [10,11,12,15,36,12,11,12]
         let c = ['hello','world','Ahmad','Abdullah']
         let d = [12.0,125.25,4521.25]
+        
         let e = new Array(45,58,57,58,47)
 
         console.log(a)
@@ -39,7 +40,9 @@
         console.log(e[2])
         console.log(e[3])
         console.log(e[4])
+
         console.log(e[5])
+        
         console.log(a[0])
 
         // check the type of variable 
@@ -61,6 +64,8 @@
         //     console.log(e)
         // }
         // 1
+        console.log(typeof e)
+        
         if(typeof e == 'object') {
             console.log(e[1])
         } else {
@@ -110,7 +115,8 @@
 
         // splice function to add/ remove multiple values form array form specific index in between the start and end.
         // c.splice(start_index,qty_removed)
-        c.splice(1,1)
+        console.log('removed arr')
+        c.splice(1,2)
         console.log(c)
 
         // add values in between
@@ -121,6 +127,7 @@
         // slice get chunk of array without affecting orignal array
         // let slice_arr = c.slice(1,5)
         let slice_arr = c.slice(2,4)
+        console.log('slice')
         console.log(slice_arr)
         console.log(c)
 

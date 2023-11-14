@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <div>
+        <h1>Task</h1>
+            Make an array of objects (an array that will have objects)
+             to store the student information and
+             access it as hard-coded.
+            <h2>Information to store:</h2> 
+            Name, age, registration number, course, favorite programming 
+            languages (should be an array), 
+             Marks of 5 different subjects (should be an object).
+            <h2>The operations to perform:</h2>
+            <ul>
+                <li>Display every single property of any student.</li>
+                <li>Display the first and last favorite 
+                    programming language of any student.</li>
+                <li>Display the marks of any 2 subjects of any student.</li>
+            </ul>
+    </div>
+
+    <script>
+        // let arr = []
+        // arr = [1,25,4,4]
+
+
+        // console.log(arr)
+        // console.log(arr[0])
+
+        let student_info = ['ahmad','ali',25,'Python Programing','Morning']
+        console.log(student_info)
+
+        // object defination
+        // let student_obj = {}
+        let student_obj = {
+            'first_name' : 'ahmad', 
+            'last_name' : 'Ali',
+            'age' : 25,
+            'course' : 'Python Programing',
+            'batch' : 'Morning'
+        }
+        console.log(student_obj)
+
+
+        // access object
+        // 1
+        console.log(student_obj['first_name'])
+        console.log(student_obj['last_name'])
+        console.log(student_obj['age'])
+        console.log(student_obj['course'])
+        console.log(student_obj['batch'])
+
+        // 2
+        console.log(student_obj.first_name)
+        console.log(student_obj.last_name)
+        console.log(student_obj.age)
+        console.log(student_obj.course)
+        console.log(student_obj.batch)
+
+        // add new record
+        student_obj['email'] = 'test@test.com'
+        
+        //update new record
+        student_obj['email'] = 'ahmad@gmail.com'
+        // student_obj.email = 'test@test.com'
+
+
+        // delete key
+
+        // delete student_obj['email']
+        student_obj['email'] = ''
+        console.log(student_obj)
+
+
+        // keys of an object
+
+        let obj_keys = Object.keys( student_obj )
+        console.log(obj_keys)
+
+
+        // values of an object
+
+        let obj_values = Object.values( student_obj )
+        console.log(obj_values)
+
+        //
+
+        let keys_values = Object.entries( student_obj )
+        console.log(keys_values)
+        console.log(keys_values[2])
+        console.log(keys_values[2][0])
+        console.log(keys_values[2][1])
+
+
+        // 2 dimentional array
+        // let arr1 = [25,36.36,'string',false ,[1,23,45,6,78,9]]
+
+        // 3 dimentional array
+        // let arr = [
+        //             25,
+        //             36.36,
+        //             'string',
+        //             false ,
+        //             [
+        //                 1,23,45,6,78,
+        //             [2.2,36.2]
+        //         ]
+        //     ]
+        // console.log(arr)
+        // console.log(arr[4][4])
+
+
+
+    </script>
+</body>
+</html>
