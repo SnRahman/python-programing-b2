@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Loops</title>
+    </head>
+    <body>
+
+
+        <div>
+            Sum all the array elements by using a loop.
+            Reverse the array by using a loop.
+            Make a table of the given number with all possible loops.
+            Find the largest number in an array by using a loop.
+            Find the smallest number in an array by using a loop.
+            Make an array to store the name of 5 students and iterate with for and foreach loop.
+            Make an object to store the information of a student and iterate with a for-in loop.
+
+        </div>
+        <script>
+
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+            // console.log('hello world!')
+
+            // a = a+1
+            // for loop
+            for(let a=0; a<10; a++ ) {
+                console.log('hello world!')
+            }
+
+            // reverse iteration loop
+            for(let a=10; a>=0; a-- ) {
+                console.log('hello world!')
+            }
+
+            let c = ['hello','world','Ahmad','Abdullah']
+            console.log(c)
+            // console.log(c[0])
+            // console.log(c[1])
+            // console.log(c[2])
+            console.log( c[3] )
+            
+
+            // get length of an array
+            let arr_length = c.length
+            console.log('length is :' + arr_length)
+            
+            // loop on array
+            for(let a =0; a<arr_length ; a++ ) {
+                console.log('index is :' + a + ' Value of arr: ' + c[a] )
+            }
+
+            for(let a=0; a<5; a++ ) {
+                console.log('index is :' + a + ' Value of arr: ' + c[a] )
+            }
+
+            // for in arrays
+            for(let a in c ){
+                console.log('index is :' + a + ' Value of arr: ' + c[a] )
+            }
+
+            let student_obj = {
+                'first_name' : 'ahmad', 
+                'last_name' : 'Ali',
+                'age' : [25],
+                'course' : 'Python Programing',
+                'batch' : 'Morning',
+                
+            }
+
+            // for in can be used for both arrays and objects
+            for( let k in student_obj) {
+                console.log( 'Key: ' + k + ' Value is ' + student_obj[k])
+            }
+
+            // for of mostly used for arrays
+            for(let b of c) {
+                console.log(b)
+            }
+
+            // while
+            let count = 0
+            while(count<100 ){
+                console.log(count)
+                
+                count = count + 2
+            }
+
+            // do while
+            let counter = 100
+            do{
+                console.log(counter)
+                counter = counter + 2
+            }
+            while( counter < 100 )
+
+
+            // for each funtion on arrays
+            // if pass 1 paramerter we will get just value
+            c.forEach( function (value){
+                console.log(" value is: " + value)
+            })
+
+            // if pass 2 parameters we will get value and index.
+            c.forEach( function (value,index){
+                console.log("index: " + index + " value is: " + value)
+            })
+
+           
+        </script>
+    </body>
+</html>
