@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tasks Solutions</title>
+    </head>
+    <body>
+        <script>
+            // 1- Sum all the array elements by using a loop.
+            // let arr = [25,36,48,36,78,548]
+            
+            let arr = [2,3,4,5]
+            let sum = 0
+            // using for of
+            // for(let a of arr )
+            // {
+            //     sum = sum + a
+            // }
+
+            // console.log(sum)
+
+            // using for in
+            // let sum1= 0
+            // for(let a in arr )
+            // {
+            //     sum1 = sum1 + arr[a]
+            // }
+            // console.log(sum1)
+
+
+            //2- Reverse the array by using a loop.
+
+            let arr1 = [1,2,3,4,5,6,7,8,9,10]
+
+            // for(let i=0; i<=arr1.length-1;i++){
+            //     console.log(arr1[i])
+            // }
+
+            // for(let i=arr1.length-1; i>=0; i--){
+            //     console.log(arr1[i])
+            // }
+
+
+            //3- Make a table of the given number with all possible loops.
+
+            let number = 6
+            
+            // let count = 1
+            // while(count<=10){
+            //     // console.log(' 2 X 1 = 2')
+            //     console.log( number +' X ' + count + ' = ' + number*count)
+            //     count++
+            // }
+
+            // let index = [1,2,3,4,5,6,7,8,9,10]
+
+            // for(let i of index){
+            //     console.log( number +' X ' + i + ' = ' + number*i)
+            //     // console.log(i)
+            // }
+
+            // for(let i in index){
+            //     console.log( number +' X ' + index[i] + ' = ' + number*index[i])
+            //     // console.log(i)
+            // }
+
+            // 4- Find the largest number in an array by using a loop.
+            let arr2 = [54,69,2,0,1,78,99,100,260,87,0,45,78]
+            // console.log(arr2[7])
+            // let temp = arr2[0]
+            // let highest_value = 0
+
+            // for(a of arr2){
+            //     if(a> highest_value ){
+            //         highest_value = a
+            //         // console.log('new high value found ' + a )
+            //     } else {
+            //         // console.log('value is less ' + a)
+            //     }
+            // }
+
+            // console.log(highest_value)
+
+            // 6 -  Make an array to store the name of 5 students and iterate with for and foreach loop. 
+
+            // let students = ['ahsan','faisal','abdullah','taha','hamid']
+
+            // students.forEach( function (student_name) {
+            //     console.log('Name is:' + student_name)
+            // } )
+
+
+            // 7 -  Make an object to store the information of a student and iterate with a for-in loop.
+
+            let student = {
+                'first_name' : 'ahmad', 
+                'last_name' : 'Ali',
+                'age' : 25,
+                'course' : 'Python Programing',
+                'batch' : 'Morning',
+            }
+            // console.log(student.first_name)
+
+            for(let s in student){
+                console.log("key: "+ s + " value " + student[s])
+            }
+
+        </script>
+    </body>
+</html>
