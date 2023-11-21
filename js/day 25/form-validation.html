@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form Validation</title>
+        <style>
+            span {
+                color: red;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <h1>Task</h1>
+            <p>JavaScript Form Task
+                create a form with a dropdown menu for selecting a country. 
+                depending on the selected country, dynamically show or hide fields that are 
+                specific to that country's address format. For example, if "United States" is selected, 
+                show fields for state and ZIP code; if "Canada" is selected, show fields for province 
+                and postal code.
+            </p>
+        </div>
+        
+        <h1>User Signup</h1>
+        <form action="" id="form">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name">
+            <span id="first_name_error"></span>
+            <br>
+
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name">
+            <span id="last_name_error"></span>
+            <br>
+
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
+            <span id="age_error"></span>
+            <br>
+
+            <label for="phone_number">Phone Number</label>
+            <input type="number" name="phone_number" id="phone_number">
+            <span id="phone_number_error"></span>
+            <br>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <span id="email_error"></span>
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <span id="password_error"></span>
+            <br>
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password">
+            <span id="confirm_password_error"></span>
+            <br>
+
+
+            <label>Experience
+                <input type="radio" name="experience" value="fresher" checked id="fresher">Fresher
+                <input type="radio" name="experience" value="experienced" id="experienced">Experienced
+            </label>
+            <br>           
+            
+
+            <div id="education_details_div">
+                <label for="education_details">Education details</label >
+                <input type="text" name="education_details" id="education_details">
+                <span id="education_details_error"></span>
+                <br>
+            </div>
+
+            <div id="experience_div" style="display: none;">
+                <label for="experience">Experience in years</label>
+                <input type="text" name="experience" id="experience">
+                <span id="experience_error"></span>
+                <br>
+            </div>
+
+
+            
+            
+
+
+
+            <button>Submit</button>
+        </form>
+
+
+
+        <script src="./form-validation.js"></script>
+    </body>
+</html>

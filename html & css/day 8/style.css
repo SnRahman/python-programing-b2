@@ -96,7 +96,7 @@
     height: 500px;
     width: 500px;
     padding:10px;
-    background: red ;
+    background: red ;   
     /* background-clip: border-box; */
     /* background-clip: padding-box; */
     background-clip: content-box;
