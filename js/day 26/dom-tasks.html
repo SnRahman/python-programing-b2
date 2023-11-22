@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dom Tasks</title>
+        <style>
+            #counter {
+                border: 1px solid black;
+                width: 50px;
+                display: inline-block;
+                text-align: center;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Tasks</h1>
+            <ol>
+                <li><h2> create a button that changes its background color when clicked.</h2></li>
+                <li><h2> build a counter that increments when a button is clicked and displays the count on the page.</h2></li>
+                <li><h2> create a list of items. implement a way to remove an item when it is clicked.</h2></li>
+                <li><h2> create a button that enlarges the image when clicked.</h2></li>
+                <li><h2> create a color picker that changes the background color of a page element based on user selections.</h2></li>
+                <li><h2> implement a form that dynamically adds new input fields when a button is clicked.</h2></li>
+                <li><h2> create a function that displays an alert with a random fun fact when clicked.</h2></li>
+                <ul><li>  Math.floor(Math.random() * months.length) </li></ul>
+                <li><h2> create a button that simulates a lucky draw. when clicked, randomly select and display a winner from the participants.</h2></li>
+                <li><h2> when a button is clicked, display a random interesting fact from an array.</h2></li>
+                <li><h2> build a virtual dice roller that simulates rolling a standard six sided die. display the result when a button is clicked.</h2></li>
+            </ol>
+        </div>
+
+
+        <h1>Task1</h1>
+        <button id="background-color"> click to chanage background color</button>
+        <button id="background-color-reset"> reset</button>
+        <hr>
+
+        <h1>Task 2</h1>
+        <span id="counter">1</span>
+        <button id="counter-btn">increment</button>
+
+        <h1>Task 3</h1>
+        <ul>
+            <li class="items">item 1</li>
+            <li class="items">item 2</li>
+            <li class="items">item 3</li>
+            <li class="items">item 4</li>
+        </ul>
+
+        <h1>Task 4</h1>
+        <img id="img" src="./bird2.png" alt="">
+        <button id="img-btn">Cick to enlarge</button>
+
+        <h1>Task 5</h1>
+
+        <form action="" id="form">
+            <input type="color" id="color" name="color">
+            <!-- <input type="text" id="color" name="color"> -->
+            <button>change BG</button>
+        </form>
+
+        <h1>Task 6</h1>
+
+        <form action="" >
+            <div id="inputs">
+                <input type="text" name="input-1" placeholder="input-1">
+
+            </div>
+            <button type="button" id="new_btn">add new input</button>
+            
+            <hr>
+            <button>Submit</button>
+        </form>
+
+        <h1>Task 7</h1>
+        <button id="fun">Fun Fact</button>
+
+        <h1>Task 8</h1>
+        <button id="lucky_draw">Lucky Draw</button>
+        
+        
+        
+        
+        <script src="./dom-tasks.js"></script>
+    </body>
+</html>

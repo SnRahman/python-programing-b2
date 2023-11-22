@@ -16,7 +16,7 @@
     /* flex-wrap: wrap-reverse; */
 
     /* flex-flow: column wrap; */
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
 
     /* justify-content: center; */
     /* justify-content: flex-start; */
@@ -25,9 +25,10 @@
     /* justify-content: space-around; */
     /* justify-content: space-between; */
 
-    align-items: center;
-    /* align-items: baseline; */
+    /* align-items: center; */
+    align-items: baseline;
     /* align-items: flex-end; */
+    /* align-items: stretch; */
     /* align-items: flex-start; */
 }
 
