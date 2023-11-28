@@ -8,21 +8,24 @@ form.addEventListener('submit',async function(e){
     let city_name = document.getElementById('city_name').value
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${api_key}`
 
-    let response = await fetch(url)
+    if(city_name == ''){
+        alert('Kindly enter a valid city name')
+    } else {
+        let response = await fetch(url)
 
-    let data = await response.json()
+        let data = await response.json()
 
-    // data
-    get_date(data)
-    get_loc(data)
-    get_temp(data)    
-    get_feels_like_temp(data)
-    get_humidity(data)
-    get_pressure(data)
-
-    console.log(response)
-    console.log(city_name)
-    console.log(url)
+        // data
+        get_date(data)
+        get_loc(data)
+        get_temp(data)    
+        get_feels_like_temp(data)
+        get_humidity(data)
+        get_pressure(data)
+        console.log(response)
+        // console.log(city_name)
+        console.log(url)
+    }
 })
 
 
@@ -77,9 +80,9 @@ function get_temp(data) {
     let temp = data.main.temp
     let temp_in_c = temp - kelvin_const
     temp_in_c =  temp_in_c.toFixed(0) 
-    let final_temp = `${temp_in_c}°C`
+    let final_temp = `${temp_in_c}&deg C`
     let temp_element = document.getElementById('temp')
-    temp_element.innerText = final_temp
+    temp_element.innerHTML = final_temp
 }
 
 
@@ -91,9 +94,9 @@ function get_feels_like_temp(data){
     
     let weather = data.weather[0].main
     console.log(weather)
-    let final_temp = `Feels Like ${temp_in_c}°C ${weather}`
+    let final_temp = `Feels Like ${temp_in_c}&deg C ${weather}`
     let feels_like_temp = document.getElementById('feels_like_temp')
-    feels_like_temp.innerText = final_temp
+    feels_like_temp.innerHTML = final_temp
 }
 
 function get_humidity(data) {
