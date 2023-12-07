@@ -1,0 +1,24 @@
+first time if package is not installed
+1- install virtualenv
+    pip install virtualenv
+
+2- create virtual environment in our folder
+    virtualenv venv {environment name}
+
+3 - activate environment
+    venv\scripts\activate
+
+    4 - if in case face running scripts is disabled error
+        Set-ExecutionPolicy Unrestricted -Scope Process
+
+5 - de activate environment
+    deactivate
+
+6 - install flask library/ package 
+    pip install flask
+
+REFERENCE Url
+https://www.tutorialspoint.com/flask/flask_environment.htm
+
+venv\scripts\activate
+deactivate
