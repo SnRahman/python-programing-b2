@@ -2,7 +2,7 @@ let form = document.getElementById('form')
 
 form.addEventListener('submit',function(e){
 
-    // input validations
+    // input validations    
 
     // first name validation
     let first_name = document.getElementById('first_name').value
@@ -103,8 +103,8 @@ form.addEventListener('submit',function(e){
     
     if( confirm_password == '' || password != confirm_password ) {
         // confirm_password_error.innerText = "Password does'nt match"
-        confirm_password_error.innerText = 'Password does \'nt match'
-        e.preventDefault()
+            confirm_password_error.innerText = 'Password does \'nt match'
+            e.preventDefault()
 
     }else {
         confirm_password_error.innerText = ''

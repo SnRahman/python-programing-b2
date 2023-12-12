@@ -1,7 +1,8 @@
-from flask import Flask , render_template, request
+from flask import Flask , render_template, request, flash, redirect, url_for
 
 app = Flask(__name__)
 
+app.secret_key = 'index'
 
 @app.route('/home/')
 def home():
@@ -45,6 +46,47 @@ def register_get():
 
 
 
+@app.route('/signup-new')
+def signup_new():
+    return render_template('forms/signup-new.html')
+
+@app.route('/register-new',methods=['POST'] )
+def register_new():
+    data = request.form
+
+    
+
+    first_name = request.form['first_name']
+    email = request.form['email']
+    password  = request.form['password']
+    confirm_password = request.form['confirm_password']
+
+    if request.files['image']:
+        file = request.files['image']
+        file_name = file.filename
+        file.save('uploads/' + file_name)
+    else:
+        flash('Kindly upload you file ','error')
+
+
+    if first_name and email and password and password == confirm_password:
+        flash('Form is submitted successfully!','success')
+    else:
+        flash('Enter Valid informations','error')
+        return redirect( url_for('signup_new') )
+
+    # if first_name:
+    #     return first_name
+    # else:
+    #     return 'Enter your first name'
+    
+
+    # if email:
+    #     return email
+    # else:
+    #     return 'enter a valid email'
+
+    return render_template('register_new.html', data=data )
 
 
 

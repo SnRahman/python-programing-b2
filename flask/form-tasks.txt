@@ -1,0 +1,3 @@
+Make a form to collect the details of a student with proper validation
+Make a form to perform arithmetic operators with proper validation
+Make a form to collect the details of a student with a profile picture and perform proper validation 
