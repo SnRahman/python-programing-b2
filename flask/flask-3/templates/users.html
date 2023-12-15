@@ -8,6 +8,22 @@
         <title>Users</title>
     </head>
     <body>
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container d-flex flex-wrap">
+              <ul class="nav me-auto">
+                <li class="nav-item"><a href="/users" class="nav-link link-body-emphasis px-2 active" aria-current="page">Users</a></li>
+                <!-- <li class="nav-item"><a href="/html" class="nav-link link-body-emphasis px-2">Html</a></li> -->
+                
+              </ul>
+              <ul class="nav">
+                <li class="nav-item"><a href="/login" class="nav-link link-body-emphasis px-2">Login</a></li>
+                <li class="nav-item"><a href="/signup" class="nav-link link-body-emphasis px-2">Sign up</a></li>
+              </ul>
+            </div>
+          </nav>
+
+
+
         <div class="container">
             <h1>All Users</h1>
             
@@ -40,7 +56,17 @@
                             <td>{{ user[2] }}</td>
                             <td>{{ user[3] }}</td>
                             <td>{{ user[4] }}</td>
-                            <td> <a href="/delete-user/{{ user[0] }} "> <i class="fa-solid fa-trash"></i></a> </td>
+                            <td> 
+                                <a class="mx-2" href="/edit-user/{{ user[0] }} "> 
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+
+                                <a href="/delete-user/{{ user[0] }} "> 
+                                    <i class="fa-solid fa-trash"></i>
+                                </a> 
+
+                               
+                            </td>
                         </tr>
                     {% endfor %}
 

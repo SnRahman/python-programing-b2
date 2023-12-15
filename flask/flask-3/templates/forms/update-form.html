@@ -37,32 +37,22 @@
               {% endfor %}
             {% endwith %}
 
-            <form action="/register" method="POST" enctype="multipart/form-data">
+            <form action="/update-user/{{ user[0][0] }}" method="POST" enctype="multipart/form-data">
                 <!-- <form action="/register-get"> -->
                 <div class="mb-3">
                   <label for="first_name" class="form-label">First Name</label>
-                  <input type="text" class="form-control" name="first_name" id="first_name" aria-describedby="emailHelp" placeholder="First Name">
+                  <input type="text" class="form-control" value="{{ user[0][1] }}" name="first_name" id="first_name" aria-describedby="emailHelp" placeholder="First Name">
                 </div>
 
                 <div class="mb-3">
                     <label for="last_name" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" name="last_name"  id="last_name" aria-describedby="emailHelp" placeholder="last Name">
+                    <input type="text" class="form-control" value="{{ user[0][2] }}" name="last_name"  id="last_name" aria-describedby="emailHelp" placeholder="last Name">
                   </div>`
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" value=" {{ user[0][3] }}" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                  </div>
-
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" name="password" id="exampleInputPassword1">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" name="confirm_password" id="exampleInputPassword2">
                   </div>
 
                 <!-- <div class="mb-3">
