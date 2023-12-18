@@ -1,0 +1,26 @@
+body{
+    /* background-color: #5583FF; */
+    background-color: #dadada;
+}
+.container, .btn-div {
+    display: flex;
+    justify-content: center;
+}
+.signup{
+    width: 500px;
+    border: 1px solid black;
+    background-color: #FFF;
+    border-radius: 15px;
+}
+.navbar-collapse{
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: #FFF;
+}
+
+a:hover {
+    color: #FFF;
+}
