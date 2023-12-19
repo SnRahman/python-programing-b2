@@ -1,6 +1,8 @@
 body {
-    background-color: #FF6348;
+    background-color: #FF6348 !important;
+}
 
+.parent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,4 +33,12 @@ button {
     font-size: 25px;
     border: none;
     margin: 10px;
+}
+
+a {
+    color: #FFF;
+}
+
+a:hover {
+    color: #FFF;
 }
