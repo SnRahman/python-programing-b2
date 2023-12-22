@@ -124,7 +124,6 @@ def weather_app():
         return redirect(url_for('login'))
 
 
-
 @app.route('/logout')
 def logout():
     session.pop('user_id',None)
