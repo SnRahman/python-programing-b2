@@ -15,13 +15,7 @@ class counter:
 c1 = counter()
 c1.display_current_counter()
 c1.inc_counter()
-c1.inc_counter()
-c1.inc_counter()
-c1.inc_counter()
-c1.inc_counter()
-c1.inc_counter()
-c1.inc_counter()
-c1.inc_counter()
+
 c1.display_current_counter()
 
 
@@ -30,8 +24,7 @@ print('Object 2')
 c2 = counter()
 c2.display_current_counter()
 c2.inc_counter()
-c2.inc_counter()
-c2.inc_counter()
+
 c2.display_current_counter()
 
 c1.inc_counter()

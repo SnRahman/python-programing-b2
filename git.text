@@ -1,0 +1,29 @@
+1- initialize git in new project
+git init
+
+2- get status of repository
+git status
+
+3- add new file in git
+git add {filename}
+
+4- add all files in git 
+git add .
+
+5- commit new changes
+git commit -m "{message}"
+
+6- push code to server
+git push
+
+first time
+7- add remote directory origin for fist time
+git remote add origin <path/directory name>
+
+8- git push --set-upstream origin master
+
+9- clone the existing directory
+git clone <remote path>
+
+10 - get the latest changes
+git pull
