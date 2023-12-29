@@ -1,0 +1,58 @@
+crate virtual environment
+
+first time if package is not installed
+1- install virtualenv
+    pip install virtualenv
+
+2- create virtual environment in our folder
+    virtualenv venv {environment name}
+
+3 - activate environment
+    venv\scripts\activate
+
+4 - if in case face running scripts is disabled error
+    Set-ExecutionPolicy Unrestricted -Scope Process
+
+5 - de activate environment
+    deactivate
+
+###################################################
+
+django-admin == py manage.py 
+1 - create project
+    django-admin startproject <name>
+
+    # create project in the same directory
+    django-admin startproject <name> .
+
+2- run server
+
+    - django-admin runserver
+    - py manage.py runserver
+
+3- create apps 
+    django-admin startapp playground
+    py manage.py startapp playground
+
+4- register app in project settings
+
+5- create view in app to show html in browser
+    from django.http import HttpResponse
+    # Create your views here.
+
+    def say_hello(request):
+        return HttpResponse('Hello world!')
+
+
+6 - load template
+
+    - create templates folder in  app directory
+    - create html files in templates folder
+    - import render function in views   
+        from django.template import loader
+
+        in function
+        template = loader.get_template('index.html')
+
+
+
