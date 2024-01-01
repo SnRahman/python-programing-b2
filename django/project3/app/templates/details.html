@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+</head>
+<body>
+    
+    {% comment %} if condition in templates {% endcomment %}
+    {% if username == 'GUEST' or username == 'guest'   %}
+        <p>Kindly login to get full access.</p>
+    {% elif username == '' %}
+        <p>Kindly login to get full access. you are login as guest</p>
+    {% else %}
+        <p>welcome!!! </p>
+    {% endif %}
+
+
+    <h1>Username {{ username }} </h1>
+    <h1>Details of product {{ details_id }} </h1>
+
+    {% comment %} for loops in templates {% endcomment %}
+    {%  for product in products  %}
+         <h1>Product ID: {{ product.id }} </h1>
+         <h3>Product Name: {{ product.name }} </h3>
+         <h3>Product Price: RS.{{ product.price }} </h3>
+    {% endfor %}
+
+    {% comment %} <p> {{ products }} </p>  {% endcomment %}
+</body>
+</html>
