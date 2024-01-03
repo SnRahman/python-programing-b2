@@ -1,0 +1,67 @@
+1- create super user
+    py manage.py createsuperuser
+ 
+2- add username email and password
+
+
+3- now create new model
+    create class in model.py
+
+    class Member(models.Model):
+        firstname = models.CharField(max_length=255)
+        lastname = models.CharField(max_length=255)
+
+    3a- fields reference 
+        https://docs.djangoproject.com/en/4.2/ref/models/fields/#model-field-types
+    
+    3b - model documentations
+        https://docs.djangoproject.com/en/4.2/topics/db/models/
+
+4- Run command to create the table structure
+    py manage.py makemigrations <app name>
+
+    after successfull run there will be a new file in migrations folder conatingin table details
+
+5- run command to create table in database
+    py manage.py migrate
+
+6- list your table in admin portal for display
+
+    - open admin.py
+    - import your model class here
+        from .models import Person
+
+        admin.site.register(Person)
+
+7 - perform crud
+
+    a- add new record in table
+        -import the model
+            from members.models import Member
+
+            member = Member(firstname='Emil', lastname='Refsnes')
+            member.save()
+
+    b - get all records
+
+        Member.objects.all()
+        Member.objects.all().values()
+        member = Member.objects.get(id=1)
+        member = Member.objects.get(pk=1)
+
+        member = Member.objects.get( Q(first_name='Saad') | Q(last_name='Ahmad'))
+    c- update 
+
+        instance = YourModel.objects.get(pk=1)
+        instance.field1 = 'New Value'
+        instance.save()
+        
+    d- delete
+        instance = YourModel.objects.get(pk=1)
+        instance.delete()
+
+8- display table columns in admin
+    class MemberAdmin(admin.ModelAdmin):
+    list_display = ('id','first_name','last_name','phone')
+
+    admin.site.register(Member,MemberAdmin)
