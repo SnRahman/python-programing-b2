@@ -1,0 +1,49 @@
+1- get all data from model
+    Student.objects.all()
+    MOdelName.objects.all()
+
+1-1 get data by any key
+    students = Student.objects.get(id=5)
+    students = Student.objects.get(pk=4)
+
+1-2 get multiple records by columns names
+    students = Student.objects.filter(f_name='ahmad')
+    students = Student.objects.filter(email='admin@admin.com')
+
+1-3 get data using multiple columns at once
+    students = Student.objects.filter(f_name='mohsin' ,l_name='Ali')
+    students = Student.objects.get(f_name='mohsin' ,l_name='Ali')
+1-4 get data using or gates 
+    from django.db.models import Q
+    
+    students = Student.objects.filter( Q(f_name='mohsin') | Q(l_name='usman') )
+
+1-5 get total records
+    total = Student.objects.count()
+    total = students.count()
+
+
+2- Create new data using model
+    student = Student(f_name = f_name, l_name= l_name, email=email , contact_no = contact_no)
+    student.save()
+
+3 - update model
+    student = Student.objects.get(id=id)
+
+    student.f_name = 'Adeel'
+    student.l_name = 'Ahmad'
+    student.email = 'adeelahmad@gmail.com'
+    student.contact_no = '031324871257'
+    
+    student.save()
+
+4- delete record in model
+    student = Student.objects.get(id=id)
+    student.delete()
+
+    
+
+
+
+
+

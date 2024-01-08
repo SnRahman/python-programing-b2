@@ -1,14 +1,50 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.db.models import Q
+
+
 from .forms.signup_form import SignupForm
 from .forms.register_form import RegisterForm
 from .models import Student
 
 
 
+
 # Create your views here.
 def index(request):
-    return HttpResponse('index page')
+    # get all data form model
+    students = Student.objects.all()
+
+    # get total records
+    # total = Student.objects.count()
+    # total = students.count()
+    # return HttpResponse(total)
+
+
+    # get data by any key
+    # students = Student.objects.get(id=5)
+    # students = Student.objects.get(pk=4)
+
+    # get multiple records by columns names
+    # students = Student.objects.filter(f_name='ahmad')
+    # students = Student.objects.filter(email='admin@admin.com')
+
+    # get data using multiple columns at once
+    # students = Student.objects.filter(f_name='mohsin' ,l_name='Ali')
+    # students = Student.objects.get(f_name='mohsin' ,l_name='Ali')
+
+
+
+
+
+
+    # get data using or gates 
+    # students = Student.objects.filter( Q(f_name='mohsin') | Q(l_name='usman') )
+
+
+
+    # return HttpResponse(students)
+    return render(request,'students.html', {'students' : students })
 
 def signup(request):
     if request.method == 'GET':
@@ -46,3 +82,21 @@ def register(request):
         else:
             return HttpResponse("Invalid Form")
         
+
+def delete(request,id):
+    student = Student.objects.get(id=id)
+    # student.delete()
+    return redirect( index )
+    # return HttpResponse(f'Student record deleted: {id}')
+
+def edit(request,id):
+
+    student = Student.objects.get(id=id)
+    student.f_name = 'Adeel'
+    student.l_name = 'Ahmad'
+    student.email = 'adeelahmad@gmail.com'
+    student.contact_no = '031324871257'
+    student.save()
+
+    return HttpResponse(student)
+    return HttpResponse(f'Edit Route: {id}')
