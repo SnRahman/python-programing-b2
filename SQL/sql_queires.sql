@@ -30,7 +30,7 @@ INSERT INTO `users` (`phone`,`fname`,`lname`,`email`)
 VALUES ('13156564654325','Ahmad','ahsan', 'adhmadahsan@gmail.com');
 
 -- upadate specific row in table
-UPDATE `users`
+UPDATE `users`  
 SET `phone` = '0300123456789'
 WHERE `id` = 1;
 

@@ -74,9 +74,10 @@ def register(request):
         # return HttpResponse(form)
         return render(request,'django_form1.html',{'form': form})
     else:
-        form_data = RegisterForm( request.POST )
-
+        form_data = RegisterForm( request.POST, request.FILES )
+        
         if form_data.is_valid():
+            # img = form_data.cleaned_data['profile_img']
             form_data.save()
             return HttpResponse('form is submitted')
         else:

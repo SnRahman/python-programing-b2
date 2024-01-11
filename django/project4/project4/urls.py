@@ -1,5 +1,5 @@
 """
-URL configuration for project3 project.
+URL configuration for project4 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,15 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-# for media
-from . import settings
+from .settings import MEDIA_URL , MEDIA_ROOT
 from django.conf.urls.static import static
+
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/',include('app.urls')),
-    path('site/',include('website.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include('app.urls'))
+] + static(MEDIA_URL,document_root= MEDIA_ROOT)
