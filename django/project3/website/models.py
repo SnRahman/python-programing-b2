@@ -11,4 +11,5 @@ class Student(models.Model):
 
 
     def __str__(self):
+        # return f'User :{self.username}'
         return f' {self.id} -  {self.f_name} - {self.l_name} - {self.email} - {self.contact_no}' 
