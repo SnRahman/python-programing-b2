@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms.employee_form import EmployeeForm
+
+# user authentication
+from django.contrib.auth import authenticate, login, logout
 
 # user auth forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
@@ -10,11 +13,24 @@ from .forms.user_edit_form import UserChangeCustomForm
 # user auth model
 from django.contrib.auth.models import User
 
+# flash messages
+from django.contrib import messages
+
 def dashboard(request):
-    users = User.objects.all()
-    return render(request,'dashboard.html',{'users':users})
+    # return HttpResponse(request.user.is_authenticated)
+    if request.user.is_authenticated:
+        users = User.objects.all()
+        return render(request,'dashboard.html',{'users':users})
+    else:
+        messages.error(request,'Kindly Login first')
+        return redirect('login')
     # return HttpResponse(users)
 
+
+def user_logout(request):
+    logout(request)
+    messages.success(request,'Logout successfully!')
+    return redirect('login')
 
 
 def signup(request):
@@ -29,10 +45,34 @@ def signup(request):
 
         if form.is_valid :
             form.save()
-            return HttpResponse('user Created')
+            messages.success(request,'User Created Successfully!')
+            return redirect('dashboard')
         else:
-            return HttpResponse('Invalid info')
+            messages.error(request,'Invalid info')
+            return redirect('signup')
 
+
+def user_login(request):
+    if request.method == 'POST':
+        # return HttpResponse(request.POST)
+        email = request.POST['email']
+        password = request.POST['password']
+
+        if email and password:
+            user = authenticate(request,username=email, password=password)
+            if user is not None:
+                login(request,user)
+
+                # set flash messages
+                messages.success(request,'Login successfully!')
+                
+                return redirect('dashboard')
+                # return HttpResponse(user)
+            else:
+                messages.error(request,'User not found')
+                return redirect('signup')
+    else:
+        return render(request,'login.html')
 
 
 def edit_user(request,id):
@@ -50,12 +90,18 @@ def edit_user(request,id):
 
         if form.is_valid:
             form.save()
-            return HttpResponse('Record updated')
+            messages.success(request,'Record updated Successfully!')
+            return redirect('dashboard')
         else:
-            return HttpResponse('invalid data')
+            messages.error(request,'invalid data')
+            return redirect('edit_user',id)
 
 def delete_user(request,id):
-    return HttpResponse(f'delete: {id}')
+    user = User.objects.get(id=id)
+    user.delete()
+
+    messages.success(request,'User deleted Successfully!')
+    return redirect('dashboard')
 
 # Create your views here.
 def register(request):

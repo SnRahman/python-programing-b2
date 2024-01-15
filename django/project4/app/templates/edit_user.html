@@ -9,9 +9,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+      <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+                <li class="nav-item"><a href="{% url 'dashboard' %}" class="nav-link link-body-emphasis px-2 active" aria-current="page">Dashboard</a></li>
+          </ul>
+          <ul class="nav">
+            {% if user.is_authenticated %}
+              <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link link-body-emphasis px-2">Logout</a></li>
+            {% else %}
+              <li class="nav-item"><a href="/login" class="nav-link link-body-emphasis px-2">Login</a></li>
+              <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link link-body-emphasis px-2">Sign up</a></li>
+            {% endif %}
+        </ul>
+        </div>
+      </nav>
       <div class='container' >
         <h1 class="text-center my-5">User Update Form</h1>
-
+        {% for message in messages %}
+          <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} " role="alert">
+              {{ message }}
+          </div>
+        {% endfor %}
         <form action="{% url 'edit_user' user_id %} " method='POST' >
           {% csrf_token %}
           {{ form.as_p  }}
