@@ -34,45 +34,52 @@ def user_logout(request):
 
 
 def signup(request):
-    if request.method == 'GET':
-        # form = UserCreationForm()
-        form = UserCreationCustomForm()
+    if not request.user.is_authenticated:
+        if request.method == 'GET':
+            # form = UserCreationForm()
+            form = UserCreationCustomForm()
 
-        # return HttpResponse(form)
-        return render(request,'signup.html',{'form':form})
-    else:
-        form = UserCreationCustomForm(request.POST)
-
-        if form.is_valid :
-            form.save()
-            messages.success(request,'User Created Successfully!')
-            return redirect('dashboard')
+            # return HttpResponse(form)
+            return render(request,'signup.html',{'form':form})
         else:
-            messages.error(request,'Invalid info')
-            return redirect('signup')
+            form = UserCreationCustomForm(request.POST)
 
-
-def user_login(request):
-    if request.method == 'POST':
-        # return HttpResponse(request.POST)
-        email = request.POST['email']
-        password = request.POST['password']
-
-        if email and password:
-            user = authenticate(request,username=email, password=password)
-            if user is not None:
-                login(request,user)
-
-                # set flash messages
-                messages.success(request,'Login successfully!')
-                
+            if form.is_valid :
+                form.save()
+                messages.success(request,'User Created Successfully!')
                 return redirect('dashboard')
-                # return HttpResponse(user)
             else:
-                messages.error(request,'User not found')
+                messages.error(request,'Invalid info')
                 return redirect('signup')
     else:
-        return render(request,'login.html')
+        return redirect('dashboard')
+
+def user_login(request):
+    if not request.user.is_authenticated:
+        if request.method == 'POST':
+            # return HttpResponse(request.POST)
+            email = request.POST['email']
+            password = request.POST['password']
+
+            if email and password:
+                user = authenticate(request,username=email, password=password)
+                if user is not None:
+                    login(request,user)
+
+                    # set flash messages
+                    messages.success(request,'Login successfully!')
+                    
+                    return redirect('dashboard')
+                    # return HttpResponse(user)
+                else:
+                    messages.error(request,'User not found')
+                    return redirect('signup')
+        else:
+            return render(request,'login.html')
+        
+    else:
+        return redirect('dashboard')
+
 
 
 def edit_user(request,id):
