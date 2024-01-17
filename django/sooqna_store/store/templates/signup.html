@@ -1,0 +1,68 @@
+{% extends 'layout.html'  %}
+{% load static %}
+{% block 'content' %}
+<div class="main-content mb-5 pb-5 d-flex flex-direction-row pt-5">
+    <div class="main-img">
+        <img src="{% static 'img/bag.png' %}" height="100%" width="100%" alt="">
+    </div>
+    <div class="main-form">
+        <h1 class="mb-4">Signup to avail amazing deals!</h1>
+        <p class="form-details mb-5">Enter you details bellow</p>
+        <form action="{% url 'signup' %}" method='POST'>
+            
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                {{ form.first_name }}
+            </div>
+            <div class="mb-3">
+                {{ form.last_name }}
+            </div>
+            
+            <div class="mb-3">
+                {{ form.username }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                {{ form.password1 }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.password2 }}
+            </div>
+            <div class="d-flex justify-content-between ">
+                <button type="submit" class="login-btn">Signup</button>
+                <a href="" class="pt-2 forgot-password">Forget Pasword?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+ {% comment %} <form action="#">
+    <div class="mb-3">
+        <input type="text" class="form-inputs" id="first_name" name="first_name"  placeholder="First Name">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-inputs" id="last_name" name="last_name"  placeholder="Last Name">
+    </div>
+    
+    <div class="mb-3">
+        <input type="text" class="form-inputs" id="email" name="email"  placeholder="Email">
+    </div>
+    <div class="mb-3">
+        <input type="password" class="form-inputs" id="password" placeholder="Password">
+    </div>
+    <div class="d-flex justify-content-between ">
+        <button type="submit" class="login-btn">Log in</button>
+        <a href="" class="pt-2 forgot-password">Forget Pasword?</a>
+    </div>
+</form> {% endcomment %}
+
+
+
+
+{% endblock %}

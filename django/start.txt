@@ -30,6 +30,10 @@ django-admin == py manage.py
     - django-admin runserver
     - py manage.py runserver
 
+2 a- runserver on diffrent/ custom port
+    - py manage.py runserver 127.0.0.1:5000
+    - py manage.py runserver 5000
+
 3- create apps 
     django-admin startapp playground
     py manage.py startapp playground

@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row top-nav">
+        <div class="col-md-3"></div>     
+        <div class="col-md-6">
+            <p class="text-center mb-0">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a class="shop-now-btn" href="#">ShopNow</a> </p> 
+        </div>
+        <div class="col-md-3">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Arabic</a></li>
+                  <li><a class="dropdown-item" href="#">French</a></li>
+                </ul>
+              </div>
+        </div>     
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg rounded" aria-label="Thirteenth navbar example">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+        <a class="navbar-brand col-lg-3 me-0 site-icon" href="#">
+            <i class="fa-solid fa-cart-shopping logo-cart"></i>
+            <span class="logo-word">Sooqna</span>
+        </a>
+        <ul class="navbar-nav col-lg-6 justify-content-lg-center nav-ul">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home'  %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=" {% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=" {% url 'signup' %}">Sign Up</a>
+          </li>
+        </ul>
+        <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+            <form class="d-flex" role="search">
+                <input class=" nav-search" type="search" placeholder="What are you looking for?" aria-label="Search">
+                <button class="btn nav-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </nav>
