@@ -40,18 +40,38 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
+
+
+      {% if not user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href=" {% url 'login' %}">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href=" {% url 'signup' %}">Sign Up</a>
           </li>
-        </ul>
+        {% endif %}
+      </ul>
         <div class="d-lg-flex col-lg-3 justify-content-lg-end">
             <form class="d-flex" role="search">
                 <input class=" nav-search" type="search" placeholder="What are you looking for?" aria-label="Search">
                 <button class="btn nav-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
+
+            <button class="btn nav-btn1" type="submit">  <i class="fa-regular fa-heart fa-lg" ></i> </button>
+              <a class="btn nav-btn2" href="#"><i class="fa-solid fa-cart-shopping fa-sm" ></i> </a>
+              <!-- <button class="btn nav-btn2" type="submit"> <i class="fa-solid fa-cart-shopping fa-sm" ></i></button> -->
+              {% if user.is_authenticated %}
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle nav-btn3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fa-user fa-beat-fade fa-sm"></i> 
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Change Password</a></li>
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                  </ul>
+                </div>
+              {% endif %}
         </div>
       </div>
     </div>

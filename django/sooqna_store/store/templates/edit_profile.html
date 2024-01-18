@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+
+{% block 'content' %}
+
+
+<hr>
+<!-- Main content -->
+      <div class="container d-flex justify-content-between mt-5">
+        <div ><a class="my" href="#">Home  /</a> <a class="my fw-bold" href="{% url 'edit_profile' %}"> My Account</a></div>
+       
+        <div class="inline">
+            <p class="fw-bold">Welcome! <a href=""  > <span class="forgot-password">{{ user.first_name | title }}</span></a>
+            </p>
+        </div>
+    </div>
+<br>
+<br>
+
+    <main>
+        <div class=" containermyaccount d-flex justify-content-between mt-3">           
+                {% include '_side_nav.html' %}
+
+                <div  class="container pe-5">
+                <form class="  col-md-8 row g-3 fborder" action="" method="POST">
+                  {% csrf_token %}
+                    <h2 class="forgot-password">Edit Your Profile</h2>
+                    <div class="col-lg-5">
+                        <label for="inputEmail4" class="form-label forgot-password">Full Name</label>
+                      </div><br>
+                      <div class=" col-lg-5">
+                        <label for="inputPassword4" class="form-label forgot-password">Username</label>
+                      </div>
+                      <div class="col-lg-5">
+                        <label for="inputEmail4" class="form-label forgot-password">Email</label>
+                      </div><br>
+                     
+                    <div class=" d-flex justify-content-lg-center btn1  mb-4">
+                  <div class="col-md-5"></div>     
+
+                        <span>Cancel</span>
+                        <button type="submit" class="btn2 ms-5 me-5"> Save Changes </button>
+                      </div>
+                  </form>
+                </div>
+            
+                  <div class="col-md-auto"></div>     
+
+                      
+                </div>   
+            
+            
+            </div>
+            
+    </main>
+<br><br>
+
+
+
+{% endblock %}

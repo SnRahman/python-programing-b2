@@ -1,6 +1,8 @@
 {% extends 'layout.html'  %}
 {% load static %}
 {% block 'content' %}
+
+
 <div class="main-content mb-5 pb-5 d-flex flex-direction-row pt-5">
     <div class="main-img">
         <img src="{% static 'img/bag.png' %}" height="100%" width="100%" alt="">
@@ -8,12 +10,13 @@
     <div class="main-form">
         <h1 class="mb-4">Log in to Exclusive</h1>
         <p class="form-details mb-5">Enter you details bellow</p>
-        <form action="#">
+        <form action="{% url 'login' %}" method='POST'>
+            {% csrf_token %}
             <div class="mb-3">
-                <input type="text" class="form-inputs" id="formGroupExampleInput" placeholder="Email or Phone Number">
+                <input type="text" class="form-inputs" name="username"  id="username" placeholder="Username">
             </div>
             <div class="mb-3">
-                <input type="password" class="form-inputs" id="formGroupExampleInput2" placeholder="Password">
+                <input type="password" class="form-inputs" name="password"  id="password" placeholder="Password">
             </div>
             <div class="d-flex justify-content-between ">
                 <button type="submit" class="login-btn">Log in</button>
