@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from .forms.create_user import CreateUser
+from .forms.update_user import UpdateUser
+from .forms.change_password import ChangePassword
+
 from django.contrib import messages
 
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 
 # Create your views here.
 def home(request):
@@ -66,4 +69,41 @@ def user_logout(request):
     return redirect('login')
 
 def edit_profile(request):
-    return render(request,'edit_profile.html')
+    if request.method == 'GET':
+        # form = UserChangeForm()
+        # return HttpResponse(request.user)
+        form = UpdateUser(request.POST or None,instance=request.user)
+        # return HttpResponse(form)
+        return render(request,'edit_profile.html',{'form':form})
+    else:
+        form = UpdateUser(request.POST or None,instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request,'User record updated Successfully!')
+            return redirect('home')
+            # return HttpResponse(request.POST)
+        else:
+            messages.error(request,'Invalid information')
+            return redirect('edit_profile')
+    
+def change_password(request):
+    if request.method == 'GET':
+
+        # form = PasswordChangeForm(request.user)
+        form = ChangePassword(request.user)
+
+        # return HttpResponse(form)
+        return render(request,'update_password.html',{'form':form})
+    else:
+        form = ChangePassword(request.user,request.POST)
+
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request,user)
+            messages.success(request,'password is updated successfully!')
+            return redirect('home')
+            # return HttpResponse('password changed')
+        else:
+            # return HttpResponse('invalid info')
+            messages.error(request,'Invalid information')
+
